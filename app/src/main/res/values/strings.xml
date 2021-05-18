@@ -9,4 +9,6 @@
     <string name="welcome_header">Welcome!</string>
     <string name="welcome_description">Description</string>
     <string name="page_title">Welcome to Zapatos App</string>
+    <string name="instruction">Instructions</string>
+    <string name="description">Description</string>
 </resources>

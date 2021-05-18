@@ -7,7 +7,7 @@ import timber.log.Timber
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_welcome)
+        setContentView(R.layout.fragment_login)
         Timber.plant(Timber.DebugTree())
 
 
