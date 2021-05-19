@@ -1,79 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="left"
-    android:orientation="vertical"
-    tools:context=".LoginFragment"
-    tools:ignore="RtlHardcoded">
+    >
 
-    <TextView
-        android:id="@+id/email_label"
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/fragment_login_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--    </androidx.fragment.app.FragmentContainerView>-->
+
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.josuemartinez.zapatosapp.User" />
+    </data>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/email"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:gravity="left"
+        android:orientation="vertical"
+        tools:context=".LoginFragment"
+        tools:ignore="RtlHardcoded">
 
-    <EditText
-        android:id="@+id/email_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="60dp"
-        android:autofillHints="Email Address"
-        android:importantForAutofill="no"
-        android:inputType="textEmailAddress"
-        tools:ignore="LabelFor" />
-
-    <TextView
-        android:id="@+id/password_label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="120dp"
-        android:text="@string/password"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="160dp"
-        android:autofillHints="Password"
-        android:importantForAutofill="no"
-        android:inputType="textPassword"
-        tools:ignore="LabelFor" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/sign_up"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="220dp"
-            android:text="@string/sign_up" />
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:text="@{user.email}"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/login"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/email_address"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="220dp"
-            android:text="@string/login" />
-    </LinearLayout>
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="32dp"
+            android:autofillHints="Email Address"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            tools:ignore="LabelFor" />
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/password_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="32dp"
+            android:text="@{user.password}"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginEnd="32dp"
+            android:autofillHints="Password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            tools:ignore="LabelFor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="220dp"
+                android:text="@string/sign_up" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="220dp"
+                android:text="@string/login" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>
