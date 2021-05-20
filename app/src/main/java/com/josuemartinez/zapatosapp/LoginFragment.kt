@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.josuemartinez.zapatosapp.databinding.FragmentLoginBinding
 
 
@@ -15,6 +17,14 @@ class LoginFragment : Fragment() {
                               savedInstanceState: Bundle?): View {
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_login, container, false)
+
+        binding.signUpButton.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+        }
+
+        binding.loginButton.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+        }
 
         return binding.root
 
