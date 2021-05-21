@@ -1,14 +1,16 @@
 <resources>
     <string name="app_name">Zapatos App</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="sign_up_text">Sign Up</string>
     <string name="login_text">Login</string>
     <string name="welcome_header">Welcome!</string>
-    <string name="welcome_description">Description</string>
+    <string name="welcome_description">Welcome to Zapatos App, the best Android app to buy and sell shoes online.</string>
     <string name="page_title">Welcome to Zapatos App</string>
-    <string name="instruction">Instructions</string>
     <string name="description">Description</string>
+    <string name="instruction">How to use Zapatos App</string>
+    <string name="instruction_description">Zapatos App is the best option to buy and sell shoes.
+    You can find an extended list of shoes on the Zapatos App. Click the Find Shoes button below to see more.</string>
+    <string name="shoe_listing">Find Shoes</string>
 </resources>

@@ -2,9 +2,6 @@ package com.josuemartinez.zapatosapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.add
-import androidx.fragment.app.commit
-import androidx.fragment.app.replace
 import timber.log.Timber
 
 
