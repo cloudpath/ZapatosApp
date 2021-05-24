@@ -27,5 +27,14 @@
         android:id="@+id/instructionFragment"
         android:name="com.josuemartinez.zapatosapp.InstructionFragment"
         android:label="fragment_instruction"
-        tools:layout="@layout/fragment_instruction" />
+        tools:layout="@layout/fragment_instruction" >
+        <action
+            android:id="@+id/action_instructionFragment_to_listingActivity"
+            app:destination="@id/listingActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/listingActivity"
+        android:name="com.josuemartinez.zapatosapp.ListingActivity"
+        android:label="activity_listing"
+        tools:layout="@layout/activity_listing" />
 </navigation>
