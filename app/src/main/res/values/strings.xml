@@ -18,4 +18,5 @@
     <string name="shoes_company_text">Shoes Company</string>
     <string name="shoes_description_text">Shoes Description</string>
     <string name="todo">TODO</string>
+    <string name="submit">Submit</string>
 </resources>

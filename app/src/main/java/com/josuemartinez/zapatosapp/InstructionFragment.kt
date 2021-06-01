@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.josuemartinez.zapatosapp.databinding.FragmentInstructionBinding
-import com.josuemartinez.zapatosapp.databinding.FragmentWelcomeBinding
 
 class InstructionFragment : Fragment() {
 
