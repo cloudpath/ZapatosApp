@@ -4,9 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ListingActivity">
 
+    <data>
+
+        <variable
+            name="shoes"
+            type="com.josuemartinez.zapatosapp.viewmodels.ShoeViewModel" />
+    </data>
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{shoes.name}"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
