@@ -1,54 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".ListingActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/shoes_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/shoes_name_text" />
-
-        <TextView
-            android:id="@+id/shoes_size"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/shoes_size_text" />
-
-        <TextView
-            android:id="@+id/shoes_company"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/shoes_company_text" />
-
-        <TextView
-            android:id="@+id/shoes_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/shoes_description_text" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/todo" />
+        android:layout_height="match_parent">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
             android:layout_gravity="end|bottom"
             android:layout_margin="16dp"
             android:contentDescription="@string/submit"
-            android:src="@drawable/ic_baseline_add_to_photos_24" />
+            android:src="@drawable/ic_baseline_add_shoe"
+            android:tint="@color/purple_200"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
-</ScrollView>
+</layout>
