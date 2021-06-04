@@ -3,26 +3,29 @@ package com.josuemartinez.zapatosapp.viewmodels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.josuemartinez.zapatosapp.models.Shoe
 import com.josuemartinez.zapatosapp.ListingActivity
-import timber.log.Timber
 
 class ShoeViewModel : ViewModel() {
 
-    private val shoes: MutableLiveData<List<Shoe>> by lazy { MutableLiveData<List<Shoe>>()
-            .also {
-            addShoes()
-        }
+//    private val shoes = MutableLiveData<List<Shoe>>(mutableListOf())
+//
+//    fun getShoes(): LiveData<List<Shoe>> = shoes
+
+
+    private val _badgeCount = MutableLiveData<Int>()
+    var number = 0
+
+    val badgeCount: LiveData<Int>
+        get() = _badgeCount
+
+    fun incrementBadgeCount() {
+        _badgeCount.postValue(++number)
     }
 
-    fun getShoes(): LiveData<List<Shoe>> {
-        return shoes
+
+    override fun onCleared() {
+        super.onCleared()
+        // Dispose All your Subscriptions to avoid memory leaks
     }
-
-    private fun addShoes() {
-        shoes.name = ""
-    }
-
-
 }
 
