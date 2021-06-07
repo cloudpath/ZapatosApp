@@ -13,14 +13,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Timber.plant(Timber.DebugTree())
 
-//        if (savedInstanceState == null) {
-//            supportFragmentManager.commit {
-//                setReorderingAllowed(true)
-//                add<LoginFragment>(R.id.fragment_login_view)
-//            }
-//        }
-
-
     }
 
 }
