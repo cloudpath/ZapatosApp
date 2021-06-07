@@ -1,30 +1,18 @@
 package com.josuemartinez.zapatosapp.viewmodels
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.josuemartinez.zapatosapp.models.Shoe
 
 class ShoeViewModel : ViewModel() {
 
-//    private val shoes = MutableLiveData<List<Shoe>>(mutableListOf())
-//
-//    fun getShoes(): LiveData<List<Shoe>> = shoes
 
+    val selectedShoes = MutableLiveData<MutableList<Shoe>>(mutableListOf())
 
-    private val _badgeCount = MutableLiveData<Int>()
-    var number = 0
-
-    val badgeCount: LiveData<Int>
-        get() = _badgeCount
-
-    fun incrementBadgeCount() {
-        _badgeCount.postValue(++number)
+    fun saveShoeData(item: MutableList<Shoe>) {
+        selectedShoes.value = item
     }
 
 
-    override fun onCleared() {
-        super.onCleared()
-        // Dispose All your Subscriptions to avoid memory leaks
-    }
 }
 
