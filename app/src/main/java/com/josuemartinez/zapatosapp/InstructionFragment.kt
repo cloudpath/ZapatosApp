@@ -17,7 +17,7 @@ class InstructionFragment : Fragment() {
             inflater, R.layout.fragment_instruction, container, false)
 
         binding.listingButton.setOnClickListener{ view: View ->
-            view.findNavController().navigate(R.id.action_instructionFragment_to_listingActivity)
+            view.findNavController().navigate(R.id.action_instructionFragment_to_listingFragment)
         }
 
         return binding.root
