@@ -55,18 +55,18 @@
             tools:ignore="LabelFor" />
 
         <TextView
-            android:id="@+id/shoe_size"
+            android:id="@+id/shoe_company"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="140dp"
             android:layout_marginEnd="32dp"
-            android:text="Shoe Size:"
+            android:text="Shoe company:"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edit_shoe_size"
+            android:id="@+id/edit_shoe_company"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -77,18 +77,18 @@
             tools:ignore="LabelFor" />
 
         <TextView
-            android:id="@+id/shoe_company"
+            android:id="@+id/shoe_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="220dp"
             android:layout_marginEnd="32dp"
-            android:text="Shoe Company:"
+            android:text="Shoe Size:"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edit_shoe_company"
+            android:id="@+id/edit_shoe_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
