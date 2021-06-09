@@ -51,6 +51,7 @@
             android:layout_marginTop="90dp"
             android:layout_marginEnd="32dp"
             android:importantForAutofill="no"
+            android:text="@={shoeViewModel.shoe.name}"
             android:inputType="text"
             tools:ignore="LabelFor" />
 
@@ -73,7 +74,8 @@
             android:layout_marginTop="170dp"
             android:layout_marginEnd="32dp"
             android:importantForAutofill="no"
-            android:inputType="number"
+            android:text="@={shoeViewModel.shoe.company}"
+            android:inputType="text"
             tools:ignore="LabelFor" />
 
         <TextView
@@ -95,7 +97,8 @@
             android:layout_marginTop="250dp"
             android:layout_marginEnd="32dp"
             android:importantForAutofill="no"
-            android:inputType="text"
+            android:text=""
+            android:inputType="number"
             tools:ignore="LabelFor" />
 
         <TextView
@@ -116,6 +119,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="330dp"
             android:layout_marginEnd="32dp"
+            android:text="@={shoeViewModel.shoe.description}"
             android:importantForAutofill="no"
             android:inputType="textMultiLine|text"
             tools:ignore="LabelFor" />

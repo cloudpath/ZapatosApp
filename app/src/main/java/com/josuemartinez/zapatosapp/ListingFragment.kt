@@ -22,7 +22,11 @@ class ListingFragment  : Fragment() {
     private val viewModel: ShoeViewModel by activityViewModels()
 
     private lateinit var binding: FragmentListingBinding
+
     private lateinit var bindingList: ListItemsBinding
+
+    private var  shoe = Shoe()
+
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?,
                                savedInstanceState: Bundle? ): View {
         // Inflate the layout for this fragment
@@ -31,11 +35,14 @@ class ListingFragment  : Fragment() {
 
 
         viewModel.getLiveData().observe(viewLifecycleOwner, {
-            buildShoe(it)
+            bindingList.apply {
+                shoeNameHint.text = shoe.name
+                shoeSizeHint.text = shoe.size.toString()
+                shoeCompanyHint.text = shoe.company
+                shoeDescriptionHint.text = shoe.description
+            }
         })
-
-
-
+        
 
 
         binding.fab.setOnClickListener { view: View ->
@@ -51,13 +58,13 @@ class ListingFragment  : Fragment() {
     }
 
 
-    fun loadShoe(shoe: Shoe) {
-        bindingList.apply {
-            shoeNameHint.text = shoe.name
-            shoeSizeHint.text = shoe.size.toString()
-            shoeCompanyHint.text = shoe.company
-            shoeDescriptionHint.text = shoe.description
-        }
-    }
+//    fun loadShoe(shoe: Shoe) {
+//        bindingList.apply {
+//            shoeNameHint.text = shoe.name
+//            shoeSizeHint.text = shoe.size.toString()
+//            shoeCompanyHint.text = shoe.company
+//            shoeDescriptionHint.text = shoe.description
+//        }
+//    }
 
 }
