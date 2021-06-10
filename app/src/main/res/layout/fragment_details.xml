@@ -97,7 +97,7 @@
             android:layout_marginTop="250dp"
             android:layout_marginEnd="32dp"
             android:importantForAutofill="no"
-            android:text=""
+            android:text="@{Double.toString(shoeViewModel.shoe.size)}"
             android:inputType="number"
             tools:ignore="LabelFor" />
 

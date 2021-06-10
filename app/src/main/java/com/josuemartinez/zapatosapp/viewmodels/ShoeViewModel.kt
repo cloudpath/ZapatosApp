@@ -1,6 +1,5 @@
 package com.josuemartinez.zapatosapp.viewmodels
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -13,11 +12,17 @@ class ShoeViewModel : ViewModel(){
 
     fun getLiveData(): LiveData<MutableList<Shoe>> = selectedShoes
 
-    fun saveShoeData(item: MutableList<Shoe>) {
-        selectedShoes.value = item
-    }
     var shoe = Shoe()
+        set(value) {
+            if (value != field)
+                field = value
+        }
 
+    fun saveShoeData(item: Shoe?) {
+        item?.let {
+            selectedShoes.value?.add(item)
+        }
+    }
 
     override fun onCleared() {
         super.onCleared()

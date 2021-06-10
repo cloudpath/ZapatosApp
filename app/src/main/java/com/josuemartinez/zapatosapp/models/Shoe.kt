@@ -4,4 +4,5 @@ data class Shoe(
     var name: String = "",
     var company: String = "",
     var size: Double = 0.0,
-    var description: String = "")
+    var description: String = ""
+)

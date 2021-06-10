@@ -23,8 +23,12 @@ class DetailsFragment : Fragment() {
                               savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_details, container, false)
+        binding.lifecycleOwner = this
+        binding.shoeViewModel = viewModel
+        binding.shoe = Shoe()
 
         binding.saveButton.setOnClickListener{
+            viewModel.saveShoeData(viewModel.shoe)
             view?.findNavController()?.navigate(R.id.action_detailsFragment_to_listingFragment)
         }
 
