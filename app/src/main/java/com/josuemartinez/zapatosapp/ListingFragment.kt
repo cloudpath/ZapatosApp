@@ -27,7 +27,7 @@ class ListingFragment  : Fragment() {
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?,
                                savedInstanceState: Bundle? ): View {
         // Inflate the layout for this fragment
-        bindingList = DataBindingUtil.inflate(inflater, R.layout.list_items, container, false, null)
+        bindingList = DataBindingUtil.inflate(inflater, R.layout.list_items, container, false)
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_listing, container, false)
         binding.lifecycleOwner = this
 
@@ -42,26 +42,29 @@ class ListingFragment  : Fragment() {
         return binding.root
     }
 
+
+
+    private fun filledShoe(shoe: Shoe) {
+        bindingList.apply {
+            textShoeName.text = shoe.name
+            textShoeCompany.text = shoe.company
+            textShoeSize.text = shoe.size.toString()
+            textShoeDescription.text = shoe.description
+        }
+    }
+
     private fun buildShoe(shoes: List<Shoe>) {
-        val shoeContainer = binding.listItems
-        val shoeLayout = bindingList.shoeItemLayout
         context?.let {
+            val shoeContainer = binding.listItems
             shoes.forEach { _ ->
-                shoeContainer.addView(shoeLayout, 0)
+                val shoeLayout = bindingList.shoeItemLayout
                 filledShoe(shoe)
+                shoeContainer.addView(shoeLayout)
                 Timber.i("Build Shoe is working")
             }
         }
     }
 
-    private fun filledShoe(shoe: Shoe) {
-        bindingList.apply {
-            shoeNameHint.text = shoe.name
-            shoeCompanyHint.text = shoe.company
-            shoeSizeHint.text = shoe.size.toString()
-            shoeDescriptionHint.text = shoe.description
-        }
-    }
 }
 
 

@@ -1,116 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
             name="shoe_list_items"
             type="com.josuemartinez.zapatosapp.models.Shoe" />
+
+        <variable
+            name="shoeViewModel"
+            type="com.josuemartinez.zapatosapp.viewmodels.ShoeViewModel" />
     </data>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:id="@+id/shoeItemLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
 
 
         <TextView
-            android:id="@+id/shoe_name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:text="Shoe Name"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="Shoe Name" />
 
 
         <TextView
-            android:id="@+id/shoe_name_hint"
+            android:id="@+id/text_shoe_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="116dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:hint="Shoe Name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/shoe_name_text"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:hint="@string/shoe_name_hint" />
+
 
         <TextView
-            android:id="@+id/shoe_company_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Shoe Company"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/shoe_name_text" />
+            android:layout_marginTop="38dp"
+            android:text="Shoe Company" />
 
 
         <TextView
-            android:id="@+id/shoe_company_hint"
+            android:id="@+id/text_shoe_company"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="38dp"
             android:layout_marginEnd="16dp"
-            android:hint="Shoe Company"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/shoe_company_text"
-            app:layout_constraintTop_toBottomOf="@+id/shoe_name_hint" />
+            android:hint="Shoe Company" />
 
 
         <TextView
-            android:id="@+id/shoe_size_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Shoe Size"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/shoe_company_text" />
+            android:layout_marginTop="68dp"
+            android:text="Shoe Size" />
 
         <TextView
-            android:id="@+id/shoe_size_hint"
+            android:id="@+id/text_shoe_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="68dp"
             android:layout_marginEnd="16dp"
-            android:hint="Shoe Size"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/shoe_size_text"
-            app:layout_constraintTop_toBottomOf="@+id/shoe_company_hint" />
+            android:hint="Shoe Size" />
 
         <TextView
-            android:id="@+id/shoe_description_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Description"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/shoe_size_text" />
+            android:layout_marginTop="98dp"
+            android:text="Description" />
 
         <TextView
-            android:id="@+id/shoe_description_hint"
+            android:id="@+id/text_shoe_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="98dp"
             android:layout_marginEnd="16dp"
-            android:hint="Description"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/shoe_size_text"
-            app:layout_constraintTop_toBottomOf="@+id/shoe_size_hint" />
+            android:hint="Description" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
 
 </layout>

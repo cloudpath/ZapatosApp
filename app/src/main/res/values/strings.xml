@@ -13,5 +13,6 @@
     <string name="shoe_listing">Find Shoes</string>
     <string name="submit">Submit</string>
     <string name="add_a_shoe">Add a Shoe</string>
+    <string name="shoe_name_hint">Shoe Name</string>
 
 </resources>

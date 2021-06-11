@@ -4,13 +4,6 @@
 xmlns:tools="http://schemas.android.com/tools"
 tools:context=".ListingActivity">
 
-    <data>
-
-        <variable
-            name="shoes"
-            type="com.josuemartinez.zapatosapp.viewmodels.ShoeViewModel" />
-    </data>
-
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -45,8 +38,6 @@ tools:context=".ListingActivity">
                 android:orientation="vertical">
 
             </LinearLayout>
-
-
 
         </ScrollView>
 

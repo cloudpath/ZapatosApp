@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.josuemartinez.zapatosapp.models.Shoe
-import timber.log.Timber
 
 class ShoeViewModel : ViewModel(){
 
@@ -24,10 +23,6 @@ class ShoeViewModel : ViewModel(){
         }
     }
 
-    override fun onCleared() {
-        super.onCleared()
-        Timber.i("ShoeViewModel destroyed!")
-    }
 
 }
 

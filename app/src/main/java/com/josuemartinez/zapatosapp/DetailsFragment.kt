@@ -25,7 +25,6 @@ class DetailsFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_details, container, false)
         binding.lifecycleOwner = this
         binding.shoeViewModel = viewModel
-        binding.shoe = Shoe()
 
         binding.saveButton.setOnClickListener{
             viewModel.saveShoeData(viewModel.shoe)
