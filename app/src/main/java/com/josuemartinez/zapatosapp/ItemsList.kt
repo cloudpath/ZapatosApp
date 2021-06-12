@@ -24,6 +24,7 @@ class ItemsList: LinearLayout {
 
     fun filledShoe(shoe: Shoe) {
         bindingList.apply {
+            addView(this.root)
             textShoeName.text = shoe.name
             textShoeCompany.text = shoe.company
             textShoeSize.text = shoe.size.toString()
