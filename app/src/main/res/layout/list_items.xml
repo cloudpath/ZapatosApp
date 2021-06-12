@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -12,84 +13,86 @@
             type="com.josuemartinez.zapatosapp.viewmodels.ShoeViewModel" />
     </data>
 
-
-    <RelativeLayout
-        android:id="@+id/shoeItemLayout"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/shoe_items_layout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="16dp">
+        android:orientation="horizontal">
 
-
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Shoe Name" />
+            android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Shoe Name" />
 
-        <TextView
-            android:id="@+id/text_shoe_name"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Shoe Company" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Shoe Size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Description" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="116dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:hint="@string/shoe_name_hint" />
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/text_shoe_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:hint="@string/shoe_name_hint" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="38dp"
-            android:text="Shoe Company" />
+            <TextView
+                android:id="@+id/text_shoe_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:hint="Shoe Company" />
 
+            <TextView
+                android:id="@+id/text_shoe_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:hint="Shoe Size" />
 
-        <TextView
-            android:id="@+id/text_shoe_company"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="116dp"
-            android:layout_marginTop="38dp"
-            android:layout_marginEnd="16dp"
-            android:hint="Shoe Company" />
+            <TextView
+                android:id="@+id/text_shoe_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:hint="Description" />
 
+        </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="68dp"
-            android:text="Shoe Size" />
-
-        <TextView
-            android:id="@+id/text_shoe_size"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="116dp"
-            android:layout_marginTop="68dp"
-            android:layout_marginEnd="16dp"
-            android:hint="Shoe Size" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="98dp"
-            android:text="Description" />
-
-        <TextView
-            android:id="@+id/text_shoe_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="116dp"
-            android:layout_marginTop="98dp"
-            android:layout_marginEnd="16dp"
-            android:hint="Description" />
-
-    </RelativeLayout>
-
+    </LinearLayout>
 
 </layout>
