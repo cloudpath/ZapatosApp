@@ -1,13 +1,13 @@
 package com.josuemartinez.zapatosapp
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.onNavDestinationSelected
 import com.josuemartinez.zapatosapp.databinding.FragmentListingBinding
 import com.josuemartinez.zapatosapp.models.Shoe
 import com.josuemartinez.zapatosapp.viewmodels.ShoeViewModel
@@ -37,9 +37,21 @@ class ListingFragment  : Fragment() {
             view.findNavController().navigate(R.id.action_listingFragment_to_detailsFragment)
         }
 
+
+        setHasOptionsMenu(true)
         return binding.root
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu, menu)
+        return super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val navController = findNavController()
+        // Associate the menu items on menu.xml with destinations name
+        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+    }
 
     private fun buildShoe(shoes: List<Shoe>) {
         context?.let { context ->
@@ -55,8 +67,6 @@ class ListingFragment  : Fragment() {
                 Timber.i("Build Shoe is working")
         }
     }
-    
-
 
 }
 

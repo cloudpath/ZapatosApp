@@ -7,47 +7,57 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.josuemartinez.zapatosapp.LoginFragment"
-        android:label="fragment_login"
+        android:label="Zapatos App"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
+            app:destination="@id/welcomeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false"/>
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.josuemartinez.zapatosapp.WelcomeFragment"
-        android:label="fragment_welcome"
+        android:label="Welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
             android:id="@+id/action_welcomeFragment_to_instructionFragment"
-            app:destination="@id/instructionFragment" />
+            app:destination="@id/instructionFragment"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="false"/>
     </fragment>
     <fragment
         android:id="@+id/instructionFragment"
         android:name="com.josuemartinez.zapatosapp.InstructionFragment"
-        android:label="fragment_instruction"
+        android:label="Instructions"
         tools:layout="@layout/fragment_instruction" >
         <action
             android:id="@+id/action_instructionFragment_to_listingFragment"
-            app:destination="@id/listingFragment" />
+            app:destination="@id/listingFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false"/>
     </fragment>
     <fragment
         android:id="@+id/listingFragment"
         android:name="com.josuemartinez.zapatosapp.ListingFragment"
-        android:label="fragment_listing"
+        android:label="Listings"
         tools:layout="@layout/fragment_listing" >
         <action
             android:id="@+id/action_listingFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
+            app:destination="@id/detailsFragment"
+            app:popUpTo="@id/listingFragment"
+            app:popUpToInclusive="false"/>
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.josuemartinez.zapatosapp.DetailsFragment"
-        android:label="fragment_details"
+        android:label="Shoe Details"
         tools:layout="@layout/fragment_details" >
         <action
             android:id="@+id/action_detailsFragment_to_listingFragment"
-            app:destination="@id/listingFragment" />
+            app:destination="@id/listingFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false"/>
     </fragment>
 
 
