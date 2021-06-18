@@ -9,6 +9,8 @@
             type="com.josuemartinez.zapatosapp.MainActivity" />
     </data>
 
+    <!-- Using LinearLayout to keep Toolbar and FragmentContainerView on a simple format. -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
