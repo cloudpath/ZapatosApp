@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.onNavDestinationSelected
 import com.josuemartinez.zapatosapp.databinding.FragmentListingBinding
+import com.josuemartinez.zapatosapp.databinding.FragmentLoginBinding
 import com.josuemartinez.zapatosapp.models.Shoe
 import com.josuemartinez.zapatosapp.viewmodels.ShoeViewModel
 import timber.log.Timber
@@ -23,8 +24,9 @@ class ListingFragment  : Fragment() {
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?,
                                savedInstanceState: Bundle? ): View {
         // Inflate the layout for this fragment
-//
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_listing, container, false)
+
+        binding = FragmentListingBinding.inflate(inflater, container, false)
+
         binding.lifecycleOwner = this
 
         viewModel.getShoeData().observe(viewLifecycleOwner, {
@@ -33,8 +35,8 @@ class ListingFragment  : Fragment() {
             }
         })
 
-        binding.fab.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_listingFragment_to_detailsFragment)
+        binding.fab.setOnClickListener {
+            view?.findNavController()?.navigate(ListingFragmentDirections.actionListingFragmentToDetailsFragment())
         }
 
 

@@ -14,15 +14,14 @@ class LoginFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        val binding: FragmentLoginBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_login, container, false)
+        val binding = FragmentLoginBinding.inflate(inflater, container, false)
 
-        binding.signUpButton.setOnClickListener{ view: View ->
-            view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+        binding.signUpButton.setOnClickListener{
+            view?.findNavController()?.navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
 
-        binding.loginButton.setOnClickListener{ view: View ->
-            view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+        binding.loginButton.setOnClickListener{
+            view?.findNavController()?.navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
 
         return binding.root

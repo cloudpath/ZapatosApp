@@ -15,9 +15,8 @@ class ItemsList: LinearLayout {
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
-    private val bindingList: ListItemsBinding = DataBindingUtil.inflate(
+    private val bindingList = ListItemsBinding.inflate(
         LayoutInflater.from(context),
-        R.layout.list_items,
         this,
         false)
 
