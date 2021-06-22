@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.josuemartinez.zapatosapp.databinding.FragmentDetailsBinding
+import com.josuemartinez.zapatosapp.models.Shoe
 import com.josuemartinez.zapatosapp.viewmodels.ShoeViewModel
 
 class DetailsFragment : Fragment() {
@@ -21,9 +22,12 @@ class DetailsFragment : Fragment() {
         val binding = FragmentDetailsBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = this
         binding.shoeViewModel = viewModel
+        binding.shoe = Shoe()
+
+        viewModel.buildNewShoe()
 
         binding.saveButton.setOnClickListener{
-            viewModel.saveShoeData(viewModel.shoe)
+            viewModel.saveShoeData()
             view?.findNavController()?.navigate(DetailsFragmentDirections.actionDetailsFragmentToListingFragment())
         }
 

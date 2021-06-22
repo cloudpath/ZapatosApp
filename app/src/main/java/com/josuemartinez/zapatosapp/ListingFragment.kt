@@ -2,14 +2,12 @@ package com.josuemartinez.zapatosapp
 
 import android.os.Bundle
 import android.view.*
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.onNavDestinationSelected
 import com.josuemartinez.zapatosapp.databinding.FragmentListingBinding
-import com.josuemartinez.zapatosapp.databinding.FragmentLoginBinding
 import com.josuemartinez.zapatosapp.models.Shoe
 import com.josuemartinez.zapatosapp.viewmodels.ShoeViewModel
 import timber.log.Timber
@@ -29,7 +27,7 @@ class ListingFragment  : Fragment() {
 
         binding.lifecycleOwner = this
 
-        viewModel.getShoeData().observe(viewLifecycleOwner, {
+        viewModel.selectedShoe.observe(viewLifecycleOwner, {
             if (it.isNotEmpty()) {
                 buildShoe(it)
             }

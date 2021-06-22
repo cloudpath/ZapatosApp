@@ -1,29 +1,37 @@
 package com.josuemartinez.zapatosapp.viewmodels
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.josuemartinez.zapatosapp.models.Shoe
 
-
 class ShoeViewModel : ViewModel(){
 
-    private val selectedShoes = MutableLiveData<MutableList<Shoe>>(mutableListOf())
+    private val _selectedShoe = MutableLiveData<MutableList<Shoe>>(mutableListOf())
 
-    var shoe = Shoe()
-        set(value) {
-            if (value != field)
-                field = value
+    var shoe: Shoe? = null
+
+    val selectedShoe: MutableLiveData<MutableList<Shoe>>
+        get() = _selectedShoe
+
+
+    // Create New Shoe on Details Fragment
+    fun buildNewShoe() {
+        shoe = Shoe("", "", 0.0, "")
+    }
+
+
+    fun saveShoeData() {
+        val shoeItem = mutableListOf<Shoe>()
+
+        selectedShoe.value?.let {
+            shoeItem.addAll(it)
         }
 
-
-    fun getShoeData(): LiveData<MutableList<Shoe>> = selectedShoes
-
-    fun saveShoeData(item: Shoe?) {
-        item?.let {
-            selectedShoes.value?.add(item)
+        shoe?.let {
+            shoeItem.add(it)
         }
+
+        selectedShoe.value = shoeItem
     }
 
 }
-
