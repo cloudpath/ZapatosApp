@@ -5,7 +5,7 @@ This is Shoe Store Inventory App project for the Udacity Android Kotlin Develope
 ## Archived project
 
  This is an Archived repository
-Repository marked as archived and read-only.
+    Repository marked as archived and read-only.
 
 ## License
 
